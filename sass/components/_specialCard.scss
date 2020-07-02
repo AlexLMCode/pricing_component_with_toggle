@@ -1,0 +1,36 @@
+.card--two{
+  background-image: linear-gradient($linear-gradient);
+  .card__plan{
+    color: white;
+  }
+  .card__benefits ul li{
+    color: white;
+  border-top: 1px solid white;
+  }
+
+  .card__benefits ul:last-child{
+    border-bottom: 1px solid white;
+  }
+
+  .card__price{
+    color: white;
+  }
+
+  .card__button{
+    background-image: none;
+    background-color: white;
+    color: #696fdd;
+
+    &:hover{
+      background: transparent;
+      color: white;
+      border: 1px solid white;
+    }
+  }
+
+  @include media(desktop-m){
+    height: 100%;
+    box-shadow: 0px 0px 42px 6px rgba(0,0,0,0.75);
+    padding-top: 4rem;
+  }
+}

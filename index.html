@@ -14,21 +14,83 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./styles/styles.css" />
+    <link rel="stylesheet" href="./styles/main.css" />
     <title>Frontend Mentor | [Pricing Component With Toggle]</title>
   </head>
   <body>
-    Our Pricing Annually Monthly Basic &dollar;19.99 &dollar;199.99 500 GB
-    Storage 2 Users Allowed Send up to 3 GB Learn More Professional
-    &dollar;24.99 &dollar;249.99 1 TB Storage 5 Users Allowed Send up to 10 GB
-    Learn More Master &dollar;39.99 &dollar;399.99 2 TB Storage 10 Users Allowed
-    Send up to 20 GB Learn More
+    <main class="container">
+      <figure class="decorative__image__container">
+        <img
+          src="./images/bg-top.svg"
+          alt="decoration image"
+          class="decoration__image--top"
+        />
+      </figure>
+      <figure class="decorative__image__container">
+        <img
+          src="./images/bg-bottom.svg"
+          alt="decoration image"
+          class="decoration__image--bottom"
+        />
+      </figure>
+      <section class="switcher">
+        <div class="switcher__title">
+          <p>Our Pricing</p>
+        </div>
+        <div class="switcher__container">
+          <p>Anually</p>
+          <div class="button__container">
+            <input type="checkbox" id="toggle" class="toggle-button" onclick="handleChange()" />
+            <label for="toggle"></label>
+          </div>
+          <p>Monthly</p>
+        </div>
+      </section>
 
+      <section class="cards__container">
+        <div class="card card--one" id="card-one">
+          <p class="card__plan">Basic</p>
+          <p class="card__price">$199.99</p>
+          <div class="card__benefits">
+            <ul class="benefits-list">
+              <li>500 GB Storage</li>
+              <li>2 Users Allowed</li>
+              <li>Send up to 3GB</li>
+            </ul>
+          </div>
+          <button class="card__button">LEARN MORE</button>
+        </div>
+        <div class="card card--two" id="card-two">
+          <p class="card__plan">Professional</p>
+          <p class="card__price">$249.00</p>
+          <div class="card__benefits">
+            <ul>
+              <li>1 TB Storage</li>
+              <li>5 Users Allowed</li>
+              <li>Send up to 10GB</li>
+            </ul>
+          </div>
+          <button class="card__button">LEARN MORE</button>
+        </div>
+        <div class="card card--three" id="card-three">
+          <p class="card__plan">Master</p>
+          <p class="card__price">$399.99</p>
+          <div class="card__benefits">
+            <ul>
+              <li>2 TB Storage</li>
+              <li>10 Users Allowed</li>
+              <li>Send up to 20GB</li>
+            </ul>
+          </div>
+          <button class="card__button">LEARN MORE</button>
+        </div>
+      </section>
+    </main>
     <div class="attribution">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
         >Frontend Mentor</a
-      >. Coded by <a href="#">Your Name Here</a>.
+      >. Coded by <a href="#">Alex Merino</a>.
     </div>
     <script src="./js/main.js"></script>
   </body>

@@ -1,0 +1,65 @@
+.switcher {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  height: 6rem;
+  margin-bottom: 3rem;
+  position: relative;
+  z-index: 2;
+  &__title {
+    p {
+      color: $dark-color;
+      font-size: 35px;
+    }
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+
+    @include media(desktop-m){
+      width: 50%;
+    }
+    p {
+      color: $medium-light-color;
+    }
+  }
+}
+
+//Switcher button
+
+.toggle-button {
+  display: none;
+  //con el mas seleccionamos el siguiente elemento
+  + label {
+    display: block;
+    width: 60px;
+    height: 30px;
+    background-image: linear-gradient($linear-gradient);
+    border-radius: 40px;
+    //box-shadow: 0 0 0 2px blue;
+    &::before {
+      content: "";
+      display: block;
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      background: $light-color;
+      position: relative;
+      transition: all 0.3s;
+      left: 5px;
+      top: 2px;
+    }
+  }
+  &:checked {
+    + label {
+      &::before {
+        left: 30px;
+      }
+    }
+  }
+}

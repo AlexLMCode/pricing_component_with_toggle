@@ -2,7 +2,70 @@ $light-color: hsl(240, 78%, 98%);
 $medium-light-color: hsl(234, 14%, 74%);
 $light-dark-color: hsl(233, 13%, 49%);
 $dark-color: hsl(232, 13%, 33%);
-$linear-gradient: hsl(236, 72%, 79%) to hsl(237, 63%, 64%);
+$linear-gradient: to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%);
 
 $font: "Montserrat", sans-serif;
 $font-size: 15px;
+@import "breakpoints";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font;
+  background-color: $light-color;
+  //overflow: hidden;
+}
+
+.attribution{
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.decorative__image__container {
+  position: relative;
+  height: auto;
+  width: auto;
+}
+
+.container {
+  max-width: 330px;
+  margin: 0 auto;
+
+  @include media(desktop-m){
+    max-width: 1000px;
+  }
+}
+
+.decoration__image--top {
+  position: absolute;
+  top: -3rem;
+  right: 0;
+  bottom: 0;
+  left: 4rem;
+  z-index: 1;
+  width: 287px;
+
+  @include media(desktop-m){
+    top: -3rem;
+    left: 83.7%;
+    width: initial;
+  }
+}
+
+.decoration__image--bottom {
+  position: absolute;
+  top: 82rem;
+  right: 0;
+  bottom: 0;
+  left: -2rem;
+
+  @include media(desktop-m){
+    top: 24rem;
+    left: -14rem;
+
+  }
+}
