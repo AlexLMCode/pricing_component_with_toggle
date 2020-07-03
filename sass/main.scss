@@ -3,3 +3,33 @@
 @import "./components/switcher";
 @import "./components/card";
 @import "./components/specialCard";
+/*
+
+#section-pricing::before,
+#section-pricing::after {
+  content: '';
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  z-index: -1;
+}
+
+#section-pricing::before {
+  background-image: url(../images/bg-bottom.svg);
+  background-position: left;
+  bottom: -30px;
+  left: 0;
+  width: 25%;
+  height: 40%;
+}
+
+#section-pricing::after {
+  background-image: url(../images/bg-top.svg);
+  background-position: 165px -43px;
+  top: -15px;
+  right: 0;
+  width: 67%;
+  height: 40%;
+}
+
+*/
